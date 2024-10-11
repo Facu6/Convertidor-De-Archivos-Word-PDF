@@ -14,10 +14,14 @@ Este proyecto es una aplicación web desarrollada con Streamlit que permite la c
 - Cargar uno o varios archivos "docx" (ya sea seleccionando individualmente o detallando la carpeta donde se encuentran los archivos).
 - Ingresar la carpeta de destino donde se descargarán los nuevos PDFs convertidos.
 
+![Conversión de Word a PDF](images/Word_PDF.png)
+
 ### Convertir PDF a Word
 
 - Cargar uno o varios archivos ".pdf".
 - Los archivos ".docx" se descargarán en la carpeta actual que se encuentran los PDFs.
+
+![Conversión de PDF a Word](images/PDF_Word.png)
 
 ### Unir múltiples archivos PDF en uno solo
 
@@ -25,6 +29,7 @@ Este proyecto es una aplicación web desarrollada con Streamlit que permite la c
 - Ordenar los archivos en la posición deseada, para que una vez unidos, sigan respetando el orden especificado.
 - Ingresar la carpeta de destino donde se descargará el nuevo PDF.
 
+![Conversión de PDF a Word](images/Union_PDFs.png)
 
 ## Instalación
 
@@ -33,11 +38,13 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 1. **Clona el repositorio:**
 
 git clone https://github.com/Facu6/Convertidor-De-Archivos-Word-PDF.git
+
 cd tu-repositorio
 
 2. **Crea un entorno virtual e instálalo**
 
 python -m venv venv
+
 venv\Scripts\activate 
 
 3. **Instala las dependencias**
@@ -58,17 +65,23 @@ streamlit run app.py
     - Unir PDFs
 
 3. Carga los archivos correspondientes y haz clic en "Convertir".
-4. Descarga los archivos convertidos.
 
 ## Estructura del Proyecto
 
 .
+
 ├── images
+
 │   ├── PDF_Word.png
+
 │   ├── Union_PDFs.png
+
 │   └── Word_PDF.png
+
 ├── app.py
+
 ├── requirements.txt
+
 └── README.md
 
 - **images**
