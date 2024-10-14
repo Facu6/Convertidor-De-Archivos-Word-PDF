@@ -90,6 +90,33 @@ streamlit run app.py
 - **app.py**
     Este archivo contiene todo el código necesario para interfaz y la lógica de conversión de archivos utilizando Streamlit.
 
+    **Explicación de Funciones**
+    
+    - generador_nombre_unico(carpeta, nombre_base)
+
+        Genera un nombre único para un archivo PDF en una carpeta específica para evitar sobreescrituras. Si un archivo con el nombre base ya existe, se añade un número al nombre hasta encontrar un nombre disponible.
+
+    - convertidor_archivos(carpeta_origen, carpeta_destino, archivos_docx_individuales=None)
+
+        Convierte archivos .docx a PDF y los guarda en una carpeta de destino. Puede convertir archivos individuales seleccionados por el usuario o todos los archivos .docx en una carpeta específica. Inicializa y desinicializa COM para la conversión.
+
+    - unir_pdfs(lista_archivos_pdf, carpeta_destino_pdf, nombre_base='pdfs_unidos')
+      
+        Une múltiples archivos PDF en un solo documento y lo guarda en una carpeta de destino con un nombre único. Utiliza PyPDF2 para combinar las páginas de los archivos PDF seleccionados.
+
+    - convertir_pdf_word(pdf, nombre_salida, carpeta_destino_word)
+
+        Convierte un archivo PDF a un documento Word (.docx) y lo guarda con el nombre especificado en una carpeta de destino. Utiliza pdf2docx para realizar la conversión.
+
+    - main()
+
+        La función principal de la aplicación Streamlit. Proporciona una interfaz de usuario para:
+
+        - Convertir archivos Word a PDF.
+        - Convertir archivos PDF a Word.
+        - Unir múltiples archivos PDF en uno solo. Dependiendo de la opción seleccionada por el usuario, se solicita la           entrada necesaria y se ejecuta la función correspondiente para realizar la tarea.
+
+
 - **requirements.txt**
     Contiene todas las dependencias necesarias para ejecutar el proyecto.
 
